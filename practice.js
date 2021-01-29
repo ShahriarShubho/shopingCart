@@ -54,6 +54,7 @@ function calculationTotal(){
     const subTotalPrice = getNumber * 1219 + caseNumber * 59;
     document.getElementById("subTotalTaka").innerText = subTotalPrice;
 
+
     const tex = subTotalPrice * .15;
     document.getElementById("tex").innerText = Math.round(tex);
 
@@ -85,6 +86,16 @@ function removeElement(element){
         subTotalPrice = caseNumber * 0 + getNumber * 1219;
     }
     document.getElementById("subTotalTaka").innerText = subTotalPrice;
+    removeTotal();
 
+}
+
+function removeTotal(){
+
+    const tex = subTotalPrice * .15;
+    document.getElementById("tex").innerText = Math.round(tex);
+
+    const totalPrice = subTotalPrice + tex;
+    document.getElementById("totalTaka").innerText = Math.round(totalPrice);
 
 }
